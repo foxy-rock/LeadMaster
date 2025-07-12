@@ -144,6 +144,9 @@
   .presentation-border {
     margin-top: 20px;
   }
+  .contacts__body p {
+    font-size: clamp(1.125rem, 0.96vw + 0.9rem, 1.5rem);
+  }
 }
 
 @media screen and (max-width: 699px) {
@@ -192,5 +195,21 @@
   .presentation__body-right img {
     max-width: 240px;
     width: 100%;
+  }
+
+  .contacts {
+    padding: 20px 0;
+  }
+
+    .contacts__body p  {
+      margin-top: 20px;
+    }
+  
+  .contacts__supervisor {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .contacts__supervisor-item {
+    margin-bottom: 20px;
   }
 }

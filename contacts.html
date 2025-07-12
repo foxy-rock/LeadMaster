@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>LeadMaster — Главная</title>
+    <link rel="icon" href="images/logo.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="images/logo.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="images/logo.png" sizes="96x96" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="images/logo.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="images/logo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="container">
+          <div class="header__body">
+            <div class="header__logo">
+              <a href="index.html"><img src="./images/logo.png" alt="" /></a>
+            </div>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="index.html" class="nav__link">Главная</a>
+                </li>
+                <li class="nav__item">
+                  <a href="services.html" class="nav__link">Наши продукты</a>
+                </li>
+                <li class="nav__item">
+                  <a href="contacts.html" class="nav__link">Контакты</a>
+                </li>
+                <li class="nav__item">
+                  <a href="https://crm.leadmaster.pro/" class="nav__link">Личный кабинет</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__phone">
+              <a href="https://wa.me/79686671194">+7(968)667-11-94</a>
+            </div>
+            <div class="header__burger">
+              <img src="./images/burger.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+      </header>
+      <main class="main">
+        <section class="contacts">
+          <div class="container">
+            <div class="contacts__body">
+              <h1>
+                <span>Наверняка у вас остались вопросы!</span> <br />
+                С радостью ответим вам на них <br />
+                при живом личном общении!
+              </h1>
+              <p>
+                Руководители проекта всегда на связи <br />
+                любым удобным для вас способом: звонки, WA, TG, эл.почта"
+              </p>
+              <div class="contacts__supervisor">
+                <div class="contacts__supervisor-item">
+                  <h3>Руководитель проекта Алексей</h3>
+                  <a href="https://wa.me/79686671194">Тел: +7-968-667-1194 </a>
+                  <a href="mailto:a.khovanov@leadmaster.pro">Email: a.khovanov@leadmaster.pro</a>
+                </div>
+                <div class="contacts__supervisor-item">
+                  <h3>Директор по развитию Дмитрий</h3>
+                  <a href="https://wa.me/79686671023">+7-968-667-1023</a>
+                  <a href="mailto:d.lakizenko@leadmaster.pro">Email: d.lakizenko@leadmaster.pro</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__body">
+            <div class="footer__body-polycy">
+              <img src="./images/logo-footer.svg" alt="" />
+              <div class="footer__body-polycy-list">
+                <a href="https://leadmaster.pro/pers1.pdf" class="dn-bomile">Соглашение об обработке данных</a>
+                <a href="https://leadmaster.pro/pers.pdf" class="dn-bomile">Политика конфиденциальности</a>
+              </div>
+            </div>
+            <div class="footer__body-callback" id="callback-form">
+              <form class="callback-form" action="send_mail.php" method="post">
+                <input type="text" name="email" placeholder="E-mail" required />
+                <input type="text" name="phone" id="phone" placeholder="+7(___)___-__-__" required />
+                <button type="submit" class="btn__orange">Записаться</button>
+              </form>
+              <div class="footer__body-polycy-list">
+                <a href="https://leadmaster.pro/pers1.pdf" class="dn-desktop">Соглашение об обработке данных</a>
+                <a href="https://leadmaster.pro/pers.pdf" class="dn-desktop">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>

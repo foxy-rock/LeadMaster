@@ -358,15 +358,17 @@ h2 span {
   max-width: 400px;
   color: #fff;
   transition: ease 0.2s;
-  margin-top: 50px;
   text-decoration: underline;
+}
+
+.footer__body-polycy-list {
+  margin-top: 50px;
 }
 
 .footer__body-callback a {
   max-width: 400px;
   color: #fff;
   transition: ease 0.2s;
-  margin-top: 50px;
   text-decoration: underline;
 }
 
@@ -454,3 +456,44 @@ h2 span {
   right: -225px;
 }
 
+.contacts {
+  padding: 100px 0;
+}
+
+.contacts__body h1 {
+  text-transform: uppercase;
+}
+
+.contacts__body p {
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+.contacts__supervisor {
+  margin-top: 70px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.contacts__supervisor-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.contacts__supervisor-item h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #fba300;
+}
+
+.contacts__supervisor-item a {
+  color: #fff;
+  margin-bottom: 15px;
+  transition: ease .2s;
+}
+
+.contacts__supervisor-item a:hover {
+  opacity: .8;
+}

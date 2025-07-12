@@ -1,29 +1,36 @@
 <?php
+// Проверяем, что форма отправлена методом POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST['email']);
+    // Получаем и очищаем данные из формы
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $phone = trim($_POST['phone']);
 
-    if (empty($email) || empty($phone)) {
-        die("Пожалуйста, заполните все поля.");
+    // Проверяем, что email валиден
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Некорректный email");
     }
 
-    $to = "danila961111@gmail.com"; // замените на ваш email
-    $subject = "Запись на прием";
+    // Тема письма
+    $subject = "Новая заявка с сайта";
 
-    $headers = "From: no-reply@yourdomain.com\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    // Тело письма
+    $message = "Поступила новая заявка:\n";
+    $message .= "Email: " . $email . "\n";
+    $message .= "Телефон: " . $phone . "\n";
 
-    $body = "Новая заявка:\nE-mail: $email\nТелефон: $phone\n";
+    // Заголовки письма
+    $headers = "From: no-reply@yourdomain.com\r\n"; // замените на ваш домен или почту
+    $headers .= "Reply-To: no-reply@yourdomain.com\r\n";
 
-    if (mail($to, $subject, $body, $headers)) {
-        // Успешно — делаем редирект
-        header("Location: index.html"); // замените '/' на URL вашей главной страницы
-        exit;
+    // Отправляем письмо
+    $to = "xaa1@rambler.ru"; // ваша почта для получения заявок
+
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Заявка успешно отправлена!";
     } else {
-        die("Ошибка при отправке заявки.");
+        echo "Ошибка при отправке заявки.";
     }
 } else {
-    die("Некорректный запрос");
+    echo "Некорректный запрос.";
 }
 ?>
